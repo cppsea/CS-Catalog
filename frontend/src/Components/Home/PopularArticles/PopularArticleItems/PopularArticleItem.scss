@@ -1,0 +1,62 @@
+@import "../../../../scss/variables";
+
+@import "bootstrap/scss/bootstrap-grid.scss";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/mixins";
+
+.popular-article-title {
+  text-decoration: none;
+  cursor: pointer;
+
+  @media (min-width: 300px) {
+    width: 200px;
+    font-size: 1em;
+  }
+  @media (min-width: 370px) {
+    width: 250px;
+    font-size: 1.2em;
+  }
+  @media (min-width: 700px) {
+    width: 450px;
+    font-size: 1.5em;
+  }
+  @media (min-width: 1000px) {
+    width: 240px;
+    font-size: 1.2em;
+  }
+  @media (min-width: 1400px) {
+    width: 350px;
+    font-size: 1.6em;
+  }
+  @media (min-width: 2000px) {
+    width: 480px;
+    font-size: 2.2em;
+  }
+}
+
+.popular-article-item-container {
+  align-items: center;
+  text-align: start;
+}
+
+// Dark mode
+@include color-mode(dark) {
+  .popular-article-title {
+    color: $primary-text-dark;
+
+    &:hover {
+      color: hsl(0, 0%, 85%);
+    }
+  }
+}
+
+// Light mode
+@include color-mode(light) {
+  .popular-article-title {
+    color: $primary-text-light;
+
+    &:hover {
+      color: hsl(0, 1%, 27%);
+    }
+  }
+}
